@@ -15,6 +15,8 @@ COPY run.sh /
 RUN chmod +x /run.sh
 RUN newaliases
 
+RUN ln -s -f /usr/share/zoneinfo/America/New_York /etc/localtime
+
 EXPOSE 25
 #ENTRYPOINT ["/run.sh"]
 CMD ["/run.sh"]
